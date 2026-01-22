@@ -48,14 +48,14 @@ const Home: React.FC<HomeProps> = ({ onNavigate, onUnimplemented }) => {
             <span>Est. Total Value(USDT)</span>
             <ChevronUp size={14} />
           </div>
-          <h2 className="text-3xl font-bold tracking-tight">{TOTAL_BALANCE_USDT.toFixed(8)}</h2>
+          <h2 className="text-3xl font-bold tracking-tight">{TOTAL_BALANCE_USDT.toFixed(3)}</h2>
           <p className="text-xs text-gray-500 font-medium tracking-wide">≈Rs{pkrValue.toLocaleString('en-PK', { minimumFractionDigits: 2 })}</p>
           <div className="flex items-center gap-1 text-[10px] text-green-500 font-medium pt-1">
             <span>Today's PNL +0.00059206 USDT (+0.17%)</span>
             <ChevronDown size={12} />
           </div>
         </div>
-        <button 
+        <button
           onClick={() => onNavigate('p2p')}
           className="bg-binance-yellow text-black font-bold px-4 py-2 rounded-lg text-sm"
         >
@@ -65,7 +65,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate, onUnimplemented }) => {
 
       {/* Journey Banner */}
       <div className="px-4 py-2">
-        <div 
+        <div
           className="bg-[#1e2329] rounded-xl p-4 flex items-center justify-between relative overflow-hidden border border-gray-800 cursor-pointer"
           onClick={onUnimplemented}
         >
@@ -73,7 +73,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate, onUnimplemented }) => {
             <p className="text-[10px] text-gray-500 mb-1">#2025withBinance</p>
             <div className="flex gap-2">
               <span className="text-binance-yellow text-2xl font-bold">20</span>
-              <span className="text-white text-sm font-bold leading-tight">Welcome to Your Crypto Space<br/>Journey</span>
+              <span className="text-white text-sm font-bold leading-tight">Welcome to Your Crypto Space<br />Journey</span>
             </div>
             <span className="text-binance-yellow text-2xl font-bold">25</span>
           </div>
@@ -110,7 +110,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate, onUnimplemented }) => {
 
       {/* Trending Stream */}
       <div className="px-4 py-4">
-        <div 
+        <div
           className="bg-[#6c47ff]/20 rounded-xl p-3 border border-[#6c47ff]/40 flex items-center gap-3 cursor-pointer"
           onClick={onUnimplemented}
         >
@@ -164,10 +164,10 @@ const MarketCard = ({ symbol, price, change, color, onClick }: { symbol: string,
       <p className={`text-[10px] font-bold ${color}`}>▼ {change.replace('- ', '')}</p>
     </div>
     <div className="h-6 w-full flex items-end">
-       <svg viewBox="0 0 100 20" className="w-full h-full stroke-red-500 fill-red-500/10">
-         <path d="M0,15 L10,18 L20,12 L30,16 L40,14 L50,18 L60,10 L70,12 L80,5 L90,15 L100,10" fill="none" strokeWidth="1.5" />
-         <path d="M0,15 L10,18 L20,12 L30,16 L40,14 L50,18 L60,10 L70,12 L80,5 L90,15 L100,10 L100,20 L0,20 Z" stroke="none" />
-       </svg>
+      <svg viewBox="0 0 100 20" className="w-full h-full stroke-red-500 fill-red-500/10">
+        <path d="M0,15 L10,18 L20,12 L30,16 L40,14 L50,18 L60,10 L70,12 L80,5 L90,15 L100,10" fill="none" strokeWidth="1.5" />
+        <path d="M0,15 L10,18 L20,12 L30,16 L40,14 L50,18 L60,10 L70,12 L80,5 L90,15 L100,10 L100,20 L0,20 Z" stroke="none" />
+      </svg>
     </div>
   </div>
 );

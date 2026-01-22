@@ -10,7 +10,7 @@ import { Home as HomeIcon, BarChart2, Repeat, TrendingUp, Wallet, Loader2 } from
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>('home');
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [isLoadingStuck, setIsLoadingStuck] = useState(false);
 
   const handleLogin = () => setIsLoggedIn(true);
@@ -49,13 +49,12 @@ const App: React.FC = () => {
         >
           Log In
         </button>
-        <p className="text-gray-500 text-xs mt-4">Demo account: Khalid</p>
       </div>
     );
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#0b0e11] text-[#eaecef] max-w-md mx-auto relative overflow-hidden font-['Inter'] shadow-2xl">
+    <div className="flex flex-col min-h-screen bg-[#0b0e11] text-[#eaecef] max-w-md mx-auto relative overflow-hidden font-['Inter'] shadow-2xl pt-[env(safe-area-inset-top)]">
       {/* Stuck Loader Overlay */}
       {isLoadingStuck && (
         <div className="fixed inset-0 bg-[#0b0e11]/90 z-[200] flex flex-col items-center justify-center p-6 text-center">
@@ -66,7 +65,7 @@ const App: React.FC = () => {
             onClick={() => setIsLoadingStuck(false)}
             className="mt-8 text-xs text-gray-600 underline"
           >
-            Cancel (Demo Mode)
+            Cancel
           </button>
         </div>
       )}
