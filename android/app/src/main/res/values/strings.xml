@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">BinanceClone</string>
-    <string name="title_activity_main">BinanceClone</string>
+    <string name="app_name">Binance</string>
+    <string name="title_activity_main">Binance</string>
     <string name="package_name">com.binance.clone</string>
     <string name="custom_url_scheme">com.binance.clone</string>
 </resources>
