@@ -37,15 +37,13 @@ const App: React.FC = () => {
   if (!isLoggedIn) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-[#0b0e11] p-8 text-center">
-        <div className="absolute top-0 left-0 right-0 bg-[#181a20] py-2 text-[10px] text-red-500 font-bold border-b border-gray-800 uppercase tracking-widest">
-          THIS IS FAKE UI OF BINANCE
-        </div>
+
         <img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png" className="w-20 h-20 mb-10 shadow-2xl shadow-yellow-500/20" alt="Binance" />
         <h1 className="text-3xl font-bold mb-4 text-[#eaecef]">Welcome to Binance</h1>
         <p className="text-gray-400 mb-10 max-w-xs text-sm leading-relaxed">
           The world's leading cryptocurrency exchange at your fingertips.
         </p>
-        <button 
+        <button
           onClick={handleLogin}
           className="w-full max-w-sm bg-binance-yellow text-black font-bold py-4 rounded-xl mb-4 transition-all active:scale-[0.98] shadow-lg shadow-yellow-500/10 text-lg"
         >
@@ -61,22 +59,20 @@ const App: React.FC = () => {
       {/* Stuck Loader Overlay */}
       {isLoadingStuck && (
         <div className="fixed inset-0 bg-[#0b0e11]/90 z-[200] flex flex-col items-center justify-center p-6 text-center">
-           <Loader2 size={48} className="text-binance-yellow animate-spin mb-4" />
-           <h3 className="text-lg font-bold">Synchronizing Data...</h3>
-           <p className="text-gray-500 text-sm mt-2">Connecting to the global exchange network. This may take a few moments.</p>
-           <button 
-            onClick={() => setIsLoadingStuck(false)} 
+          <Loader2 size={48} className="text-binance-yellow animate-spin mb-4" />
+          <h3 className="text-lg font-bold">Synchronizing Data...</h3>
+          <p className="text-gray-500 text-sm mt-2">Connecting to the global exchange network. This may take a few moments.</p>
+          <button
+            onClick={() => setIsLoadingStuck(false)}
             className="mt-8 text-xs text-gray-600 underline"
-           >
-             Cancel (Demo Mode)
-           </button>
+          >
+            Cancel (Demo Mode)
+          </button>
         </div>
       )}
 
       {/* Required Fake UI Disclaimer Header */}
-      <div className="bg-[#181a20] py-1.5 px-4 text-center text-[10px] text-red-500 font-black border-b border-gray-800 sticky top-0 z-[100] tracking-wider uppercase">
-        THIS IS FAKE UI OF BINANCE
-      </div>
+
 
       {/* Main Page Content */}
       <main className="flex-1 overflow-y-auto scrollbar-hide pb-20">
